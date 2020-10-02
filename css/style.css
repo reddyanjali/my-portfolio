@@ -1,4 +1,4 @@
-
+/**By Anjali Reddy**/
 body {
   font-family: 'Open Sans', sans-serif;
   color: rgba(255, 255, 255, 0.9);
@@ -48,11 +48,7 @@ a:focus {
   color: #ffffff;
   outline: 0 !important;
 }
-/**
- * ================================
- * Nav Defult Style
- * ================================
- */
+/**By Anjali Reddy**/
 .nav {
   display: inline-block;
 }
@@ -98,7 +94,7 @@ p {
   margin-bottom: 27px;
   font-weight: 400;
 }
-/* Heading Style */
+/**By Anjali Reddy**/
 h1 {
   font-family: 'Merriweather', serif;
   font-size: 55px;
@@ -135,16 +131,7 @@ h6 {
   line-height: 34px;
   font-weight: 600;
 }
-/*
- * ====================================
- * Gradient Text Color
- * ====================================
- */
-/**
- * ====================================
- *  Every Section Headline Defult Class
- * ====================================
- */
+/**By Anjali Reddy**/
 .section-heading {
   font-family: 'Merriweather', serif;
   color: #ffffff;
@@ -190,11 +177,7 @@ h6 {
 section.section {
   position: relative;
 }
-/**
- * ===============================
- *  Section Top and Bottom padding  
- * ===============================
- */
+/**By Anjali Reddy**/
 .section-separator {
   display: block;
   padding-top: 115px;
@@ -211,11 +194,7 @@ section.section {
   width: 100%;
   border-top: 1px solid;
 }
-/**
- * ====================================
- * Background Overlay Color
- * ====================================
- */
+/**By Anjali Reddy**/
 .overlay-color::before {
   content: '';
   position: absolute;
@@ -228,11 +207,7 @@ section.section {
 .overlay-color-full {
   position: relative;
 }
-/**
- * ====================================
- * Background image css
- * ====================================
- */
+/**By Anjali Reddy**/
 .bg-cover {
   -o-background-size: cover;
   -ms-background-size: cover;
@@ -244,11 +219,7 @@ section.section {
   background-repeat: no-repeat;
   background-color: #171717;
 }
-/**
- * ====================================
- * Making Same Height Left & Right Part
- * ====================================
- */
+/**By Anjali Reddy**/
 .display-table {
   display: table !important;
   width: 100%;
@@ -258,11 +229,7 @@ section.section {
   display: table-cell;
   float: none !important;
 }
-/**
- * ===============================
- *   Defult Button Style
- * ===============================
- */
+
 .btn {
   font-family: 'Open Sans', sans-serif;
   -o-border-radius: 0 0 0 0 ;
@@ -531,16 +498,7 @@ section.section {
 .p-l-50 {
   padding-left: 50px;
 }
-/** 
- * ======================
- * Social Icon Style
- * ======================
- */
-/** 
- * ======================
- * Social Icon Style
- * ======================
- */
+/**By Anjali Reddy**/
 .social-icon {
   margin-top: 15px;
 }
@@ -568,11 +526,7 @@ section.section {
 .social-icon li:last-child a {
   margin-right: 0px;
 }
-/**
- * ===================================
- * Subscription and contact  "MESSAGE"
- * ===================================
- */
+/**By Anjali Reddy**/
 .message p {
   margin-bottom: 0px;
 }
@@ -641,11 +595,7 @@ section.section {
   position: relative;
   top: 1px;
 }
-/**
- * =========================
- * Form Style 
- * =========================
- */
+/**By Anjali Reddy**/
 .single-form {
   width: 100%;
   display: inline-table;
@@ -830,6 +780,7 @@ section.section {
     line-height: 65px;
     font-weight: 300;
   }
+  /**By Anjali Reddy**/
   /**
      * ===============================
      *  Defult CSS 
@@ -860,6 +811,7 @@ section.section {
      * ===============================
      */
 }
+/**By Anjali Reddy**/
 /****************************************************************
     START MAIN CSS STYLE
 *****************************************************************/
@@ -1199,6 +1151,7 @@ section.section {
 .nav-trigger:focus {
   outline: 0 !important;
 }
+
 /**
  * ========================================
  * Home Section Style
@@ -4180,3 +4133,4 @@ section.section {
   -webkit-transform: translate3d(0, -50%, 0);
   transform: translate3d(0, -50%, 0);
 }
+/**By Anjali Reddy**/

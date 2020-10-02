@@ -1,0 +1,249 @@
+// Less Function:
+//==================================
+
+.text-shadow(@a1, @a2, @a3, @color, @important: ~""){
+    -o-text-shadow:         @a1 @a2 @a3 @color @important;
+    -ms-text-shadow:       @a1 @a2 @a3 @color @important;
+    -moz-text-shadow:       @a1 @a2 @a3 @color @important;
+    -webkit-text-shadow:    @a1 @a2 @a3 @color @important;
+    text-shadow:            @a1 @a2 @a3 @color @important;
+}
+
+.box-shadow(@a1, @a2, @a3, @a4, @color, @important: ~""){
+    -o-box-shadow:          @a1 @a2 @a3 @a4 @color @important;
+    -ms-box-shadow:          @a1 @a2 @a3 @a4 @color @important;
+    -moz-box-shadow:        @a1 @a2 @a3 @a4 @color @important;
+    -webkit-box-shadow:     @a1 @a2 @a3 @a4 @color @important;
+    box-shadow:             @a1 @a2 @a3 @a4 @color @important;
+}
+
+.border-radius( @lu: @border-radius, @ru: @border-radius, @rd: @border-radius, @ld: @border-radius, @important: ~""  ){
+    -o-border-radius:       @lu @ru @rd @ld @important;
+    -ms-border-radius:      @lu @ru @rd @ld @important;
+    -moz-border-radius:     @lu @ru @rd @ld @important;
+    -webkit-border-radius:  @lu @ru @rd @ld @important;
+    border-radius:          @lu @ru @rd @ld @important;
+}
+
+
+.background-image( @images-name, @repeat: no-repeat, @bg-att: initial, @bg-size: cover, @bg-c: #fff, @positionX: 50%, @positionY: 50% ){
+    background:             url(@images-name);
+    -o-background-size:     @bg-size;
+    -ms-background-size:    @bg-size;
+    -moz-background-size:   @bg-size;
+    -webkit-background-size:@bg-size;
+    background-size:        @bg-size;
+    background-position:    @positionX @positionY;
+    background-attachment:  @bg-att;
+    background-repeat:      @repeat;
+    background-color:       @bg-c;
+}
+
+.transform-rotate( @value ){
+    -o-transform:           rotate(@value);
+    -ms-transform:          rotate(@value);
+    -moz-transform:         rotate(@value);
+    -webkit-transform:      rotate(@value);
+    transform:              rotate(@value);
+}
+
+.transform( @value ) {
+    -o-transform: @value;
+    -ms-transform: @value;
+    -moz-transform: @value;
+    -webkit-transform: @value;
+    transform: @value;
+}
+
+.transition( @value: 200ms, @direction: ease-out ){
+    -o-transition:          all @value @direction;
+    -ms-transition:         all @value @direction;
+    -moz-transition:        all @value @direction;
+    -webkit-transition:     all @value @direction;
+    transition:             all @value @direction;
+    -o-transform-style:         preserve-3d;
+    -ms-transform-style:        preserve-3d;
+    -moz-transform-style:       preserve-3d;
+    webkit-transform-style:     preserve-3d;
+    transform-style:            preserve-3d;
+    .font-smoothing();
+}
+
+.transition-delay( @value, @important: ~"" ) {
+    -o-transition-delay:        @value @important;
+    -ms-transition-delay:       @value @important;
+    -moz-transition-delay:      @value @important;
+    -webkit-transition-delay:   @value @important;
+    transition-delay:           @value @important;
+}
+
+.transform-origin( @x: 0, @y: 0 ) {
+    -o-transform-origin:        @x @y;
+    -ms-transform-origin:       @x @y;
+    -moz-transform-origin:      @x @y;
+    -webkit-transform-origin:   @x @y;
+    transform-origin:           @x @y;
+}
+
+.font-smoothing() {
+    -moz-osx-font-smoothing:    grayscale;
+    -webkit-font-smoothing:     antialiased;
+
+    -o-backface-visibility:     hidden;
+    -ms-backface-visibility:    hidden;
+    -moz-backface-visibility:   hidden;
+    -webkit-backface-visibility:hidden;
+    backface-visibility:        hidden;
+
+    -o-perspective:             1000;
+    -ms-perspective:            1000;
+    -moz-perspective:           1000;
+    -webkit-perspective:        1000;
+    perspective:                1000;
+}
+
+.opacity( @factor, @important: ~"" ) {
+    @iefactor:      @factor*100 @important;
+    filter:         ~"alpha(opacity=@{iefactor})" @important;
+    opacity:        @factor @important;
+}
+
+.calc( @value ){
+    width:          ~'-moz-calc(@value1)';
+    width:          ~'-webkit-calc(@value1)';
+    width:          ~'-o-calc(@value1)';
+    width:          ~'calc(@value1)';
+    width:          ~'expression(@value1)';
+}
+
+
+// INPUT FORM PLACEHOLDER COLOR   
+.placeholder-color( @value ) {
+    &::-webkit-input-placeholder {
+        color:      @value !important;
+    }
+    &:-moz-placeholder {
+        color:      @value !important;
+    }
+    &::-moz-placeholder {
+        color:      @value !important;
+    }
+    &:-ms-input-placeholder {
+        color:      @value !important;
+    }
+}
+
+// .center(@value) {
+//     display:                flex;
+//    -webkit-flex-direction:  row; /* works with row or column */
+//    flex-direction:          row;
+//    -webkit-align-items:     center;
+//    align-items:             center;
+//    -webkit-justify-content: center;
+//    justify-content:         center;
+// }
+
+.overlay-color(@alpha: 0.55) {
+    background: rgba(red(@overlay-color), green(@overlay-color), blue(@overlay-color), @alpha);
+}
+
+
+// MIXINS COLOR GRADIENT
+.color-gradient(@color-1: @main-color-2, @color-2: @main-color-1, @rotate: 130deg, @alpha: 1) {
+    background-image: -webkit-linear-gradient(
+        @rotate, 
+        rgba(red(@color-1), green(@color-1), blue(@color-1), @alpha) 0%, 
+        rgba(red(@color-2), green(@color-2), blue(@color-2), @alpha) 100%
+    );
+    background-image: -moz-linear-gradient(
+        @rotate, 
+        rgba(red(@color-1), green(@color-1), blue(@color-1), @alpha) 0%, 
+        rgba(red(@color-2), green(@color-2), blue(@color-2), @alpha) 100%
+    );
+    background-image: -ms-linear-gradient(
+        @rotate, 
+        rgba(red(@color-1), green(@color-1), blue(@color-1), @alpha) 0%, 
+        rgba(red(@color-2), green(@color-2), blue(@color-2), @alpha) 100%
+    );
+    background-image: -o-linear-gradient(
+        @rotate, 
+        rgba(red(@color-1), green(@color-1), blue(@color-1), @alpha) 0%, 
+        rgba(red(@color-2), green(@color-2), blue(@color-2), @alpha) 100%
+    );
+    background-image: linear-gradient(
+        @rotate, 
+        rgba(red(@color-1), green(@color-1), blue(@color-1), @alpha) 0%, 
+        rgba(red(@color-2), green(@color-2), blue(@color-2), @alpha) 100%
+    );
+}
+
+
+.section-header-color( @heading: @dark-color, @sub-title: @dark-color, @opacity: 70% ) {
+    .section-header{
+        .section-heading {
+            color:      fade(@heading, 100%);
+        }
+        .sub-title {
+            color:      fade(@sub-title, @opacity);
+        }
+    }
+}
+
+
+.btn-custom-set( @b-col: @light-color, @col: @light-color, @bg-c: transparent, @padd-t-b: 0, @padd-l-r: 0, @ho-b-color: @main-color-1, @ho-col: @light-color, @ho-bg-c: @main-color-1, @m-width: auto ) {
+    padding:                @padd-t-b @padd-l-r;
+    border-color:           @b-col;
+    min-width:              @m-width;
+    color:                  @col;
+    background-color:       @bg-c;
+
+    &:hover {
+        border-color:       @ho-b-color;
+        color:              @ho-col;
+        background-color:   @ho-bg-c;
+    }
+}
+
+
+
+.center() {
+    position:               absolute;
+    left:                   50%;
+    top:                    50%;
+    // height: 100%;
+    .transform( ~"translate3d( -50%, -50%, 0)" );
+}
+
+
+.animation-tool( @class-name, @animation-style: preserve-3d, @duration: 2s ) {
+    -o-transform-style:         @animation-style;
+    -ms-transform-style:        @animation-style;
+    -moz-transform-style:       @animation-style;
+    -webkit-transform-style:    @animation-style;
+    transform-style:            @animation-style;
+
+    -o-animation-name:          @class-name;
+    -ms-animation-name:         @class-name;
+    -moz-animation-name:        @class-name;
+    -webkit-animation-name:     @class-name;
+    animation-name:             @class-name;
+
+    -o-animation-duration:      @duration;
+    -ms-animation-duration:     @duration;
+    -moz-animation-duration:    @duration;
+    -webkit-animation-duration: @duration;
+    animation-duration:         @duration;
+
+    -o-animation-iteration-count:       infinite;
+    -ms-animation-iteration-count:      infinite;
+    -moz-animation-iteration-count:     infinite;
+    -webkit-animation-iteration-count:  infinite;
+    animation-iteration-count:          infinite;
+
+    -o-animation-timing-function:       linear;
+    -ms-animation-timing-function:      linear;
+    -moz-animation-timing-function:     linear;
+    -webkit-animation-timing-function:  linear;
+    animation-timing-function:          linear;
+}
+

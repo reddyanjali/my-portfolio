@@ -1,0 +1,925 @@
+
+/**
+ * ===============================
+ *  Defult CSS 
+ * ===============================
+ */
+body{
+    font-family:            'Open Sans', sans-serif;
+    color:                  fade(@light-color, 90%);
+    font-size:              14px;
+    font-style:             none;
+    line-height:            27px;
+    font-weight:            400;
+    text-align:             left;
+    position:               relative;
+    background-color:       @background-2;
+}
+
+a{
+    text-decoration:    none !important;
+    display:            inline-block;
+    cursor:             pointer;
+    font-family:        'Open Sans', sans-serif;
+    background-color:   transparent;
+    padding:            0;
+    color:              @light-color;
+    .transition(0.4s);
+
+    &:hover {
+        color: @light-color;
+    }
+
+    &:focus {
+        color: @light-color;
+        outline: 0 !important;
+    }
+}
+
+
+
+/**
+ * ================================
+ * Nav Defult Style
+ * ================================
+ */
+.nav {
+    display: inline-block;
+
+    li {
+        a {
+            padding: 0px;
+            background-color: transparent;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+
+
+.fix{
+    overflow:           hidden;
+}
+
+
+.section-video { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    overflow: hidden;
+    z-index: -1;
+
+    .bgvid {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-height: 100%;
+        min-width: 100%;
+        background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+    }
+}
+.body-video-bg {
+    > .section-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+}
+
+
+p{
+    font-family:        'Open Sans', sans-serif;
+    color:              fade(@pera-color, 100%);
+    font-size:          14px;
+    margin-bottom:      27px;
+    font-weight:        400;
+}
+
+/* Heading Style */
+h1{
+    font-family:        'Merriweather', serif;
+    font-size:          55px;
+    line-height:        90px;
+    font-weight:        400;
+}
+h2{
+    font-family:        'Merriweather', serif;
+    font-size:          40px;
+    line-height:        65px;
+    font-weight:        400;
+}
+h3{
+    font-family:        'Merriweather', serif;
+    font-size:          30px;
+    line-height:        65px;
+    font-weight:        400;
+}
+h4{
+    font-family:        'Merriweather', serif;
+    font-size:          22px;
+    line-height:        40px;
+    font-weight:        400;
+}
+
+h5{
+    font-family:        'Open Sans', sans-serif;
+    font-size:          20px;
+    line-height:        38px;
+    font-weight:        600;
+}
+
+h6{
+    font-family:        'Open Sans', sans-serif;
+    font-size:          17px;
+    line-height:        34px;
+    font-weight:        600;
+}
+
+
+/*
+ * ====================================
+ * Gradient Text Color
+ * ====================================
+ */
+.gradient-text {
+    // .color-gradient(@color-1: @main-color-1, @color-2: @main-color-2);
+}
+
+
+
+/**
+ * ====================================
+ *  Every Section Headline Defult Class
+ * ====================================
+ */
+.section-heading {
+    font-family: 'Merriweather', serif;
+    color: fade(@light-color, 100%);
+    display: inline-block;
+    padding-bottom: 0px;
+    margin: 0;
+    font-size: 40px;
+    line-height: 65px;
+    font-weight: 400;
+}
+
+
+.sub-heading {
+    font-family:        'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 40px;
+    font-weight: 600;
+    color: fade(@main-color-1, 100%);
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+.color {
+    color: @main-color-1;
+}
+
+.section-header {
+    margin-bottom: 70px;
+    text-align: center;
+
+
+    .line-outer {
+        position: relative;
+        left: 50%;
+        margin-bottom: 6px;
+
+        .line {
+            top: 0px;
+        }
+    }
+        
+
+    &.text-left {
+        &,
+        * {
+            text-align: left;
+        }
+    }
+    &.text-right {
+        &,
+        * {
+            text-align: right;
+        }
+    }
+}
+
+.light-text {
+    h1,
+    h2, 
+    h3, 
+    h4, 
+    h5, 
+    h6,
+    .btn * {
+        // color: fade(@light-color, 100%);
+    }
+
+    p,
+    span,
+    .sub-title {
+        // color: fade(@light-color, 75%);
+    }
+}
+
+section {
+    &.section {
+        position: relative;
+        // background-color: @background-1;
+    }
+}
+
+
+
+/**
+ * ===============================
+ *  Section Top and Bottom padding  
+ * ===============================
+ */
+ @section-separator-value: 115px;
+ 
+.section-separator {
+    display: block;
+    padding-top: @section-separator-value;
+    padding-bottom: @section-separator-value;
+
+    &.sp-top {
+        padding-bottom: 0px;
+    }
+    &.sp-bottom {
+        padding-top: 0px;
+    }
+}
+
+.section-separator-line {
+    margin: 0;
+    width: 100%;
+    border-top: 1px solid;
+    // border-color: fade(@shadow-color, 12%);
+}
+
+
+
+/**
+ * ====================================
+ * Background Overlay Color
+ * ====================================
+ */
+.overlay-color {
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: fade(@background-1, 80%);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+}
+
+.overlay-color-full {
+    position: relative;
+    // .color-gradient( @alpha: 1 );
+}
+
+
+
+/**
+ * ====================================
+ * Background image css
+ * ====================================
+ */
+.bg-cover {
+    -o-background-size:     cover;
+    -ms-background-size:    cover;
+    -moz-background-size:   cover;
+    -webkit-background-size:cover;
+    background-size:        cover;
+    background-position:    center center;
+    background-attachment:  initial;
+    background-repeat:      no-repeat;
+    background-color:       @background-2;
+}
+
+
+
+/**
+ * ====================================
+ * Making Same Height Left & Right Part
+ * ====================================
+ */
+.display-table {
+    display: table !important;
+    width: 100%;
+
+    .left,
+    .right {
+        display: table-cell;
+        float: none !important;
+    }
+}
+
+
+
+/**
+ * ===============================
+ *   Defult Button Style
+ * ===============================
+ */
+.btn {
+    font-family: 'Open Sans', sans-serif;
+    .border-radius(0, 0, 0, 0);
+    border: none;
+    color: @light-color;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 28px;
+    margin-right: 15px;
+    overflow: hidden;
+    outline: 0;
+    position: relative;
+    z-index: 2;
+    .transition(0.4s);
+
+    &:last-child {
+        margin-right: 0px !important;
+    }
+
+    &:hover {
+        color: @light-color;
+    }
+
+    .icon {
+        position: relative;
+        top: 3px;
+        color: @main-color-1;
+    }
+
+    &.left-icon {
+        .icon {
+            margin-right: 4px;
+        }
+    }
+
+    &.right-icon {
+        .icon {
+            margin-left: 4px;
+        }
+    }
+
+    &.btn-fill,
+    &.btn-border {
+        font-size: 17px
+    }
+
+    &.btn-fill {
+        padding: 14px 30px;
+        background-color: @main-color-1;
+        color: @dark-color;
+        
+        &,
+        .icon,
+        &:hover {
+            background-color: @hover-color;
+            color: @dark-color;
+        }
+    }
+
+    &.btn-border {
+        background-color: transparent;
+        border: 2px solid;
+        border-color: @main-color-1;
+        padding: 12px 30px;
+        color: @main-color-1;
+
+        &:hover {
+            background-color: @hover-color;
+            color: @light-color;
+        }
+    }
+
+
+    &:hover {
+        // .box-shadow( 0, 5px, 28px, 0, fade(@shadow-color, 35%) );
+
+    }
+}
+
+.btn-mask,
+.btn-nav {
+    overflow: hidden;
+
+    .view-all-link-mask {
+        display: inline-block;
+        overflow: hidden;
+        .transform( ~"translate3d(-100%,0,0)" );
+
+        &,
+        .view-all-link-mask-text {
+            position: absolute;
+            top: 0;
+            right: 0px;
+            bottom: 0;
+            left: 0px;
+            .transition( 600ms );
+            z-index: 111;
+            .opacity( @factor: 1 );
+
+            &,
+            .icon {
+                color: @hover-color;
+            }
+        }
+
+        .view-all-link-mask-text {
+            .transform( ~"translate3d( 100%, 0, 0 )" );
+        }
+    }
+
+    &:hover,
+    &.active {
+        // .box-shadow( 0, 5px, 28px, 0, fade(@shadow-color, 35%) );
+
+        .view-all-link-mask {
+            &,
+            .view-all-link-mask-text {
+                .transform( ~"translate3d( 0, 0, 0 )" );
+            }
+        }
+
+    }
+}
+
+.btn-mask-fn( @padding: 0 0 0 0, @background-color: transparent, @color: @light-color, @hover-color: @hover-color ) {
+    
+    &,
+    .icon {
+        color: @color;
+    }
+
+    .view-all-link-mask {
+        &,
+        .view-all-link-mask-text {
+            background-color: @background-color;
+            padding: @padding;
+
+            &,
+            * {
+                color: @hover-color;
+            }
+        }
+    }
+}
+
+
+
+
+.btn.active.focus, 
+.btn.active:focus, 
+.btn.focus, 
+.btn:active.focus, 
+.btn:active:focus, 
+.btn:focus {
+    outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color !important;
+    outline-offset: -2px;
+}
+
+.btn-text-link {
+    padding: 50px 0 0 0;
+    text-align: center;
+    // color: fade(@dark-color, 85%);
+
+    a {
+        // color: @main-color-1;
+        margin-left: 10px;
+    }
+}
+
+
+
+// Margin 15px
+.m-t-15 {
+    margin-top: 15px;
+}
+.m-r-15 {
+    margin-right: 15px;
+}
+.m-b-15 {
+    margin-bottom: 15px;
+}
+.m-l-15 {
+    margin-left: 15px;
+}
+
+
+// Margin 30px
+.m-t-30 {
+    margin-top: 30px;
+}
+.m-r-30 {
+    margin-right: 30px;
+}
+.m-b-30 {
+    margin-bottom: 30px;
+}
+.m-l-30 {
+    margin-left: 30px;
+}
+
+
+// Margin 40px
+.m-t-40 {
+    margin-top: 40px;
+}
+.m-r-40 {
+    margin-right: 40px;
+}
+.m-b-40 {
+    margin-bottom: 40px;
+}
+.m-l-40 {
+    margin-left: 40px;
+}
+
+
+// Margin 50px 
+.m-t-50 {
+    margin-top: 50px;
+}
+.m-r-50 {
+    margin-right: 50px;
+}
+.m-b-50 {
+    margin-bottom: 50px;
+}
+.m-l-50 {
+    margin-left: 50px;
+}
+
+// Padding 30px
+.p-t-30 {
+    padding-top: 30px;
+}
+.p-r-30 {
+    padding-right: 30px;
+}
+.p-b-30 {
+    padding-bottom: 30px;
+}
+.p-l-30 {
+    padding-left: 30px;
+}
+
+
+// Padding 40px
+.p-t-40 {
+    padding-top: 40px;
+}
+.p-r-40 {
+    padding-right: 40px;
+}
+.p-b-40 {
+    padding-bottom: 40px;
+}
+.p-l-40 {
+    padding-left: 40px;
+}
+
+
+// Padding 50px 
+.p-t-50 {
+    padding-top: 50px;
+}
+.p-r-50 {
+    padding-right: 50px;
+}
+.p-b-50 {
+    padding-bottom: 50px;
+}
+.p-l-50 {
+    padding-left: 50px;
+}
+
+
+
+
+/** 
+ * ======================
+ * Social Icon Style
+ * ======================
+ */
+/** 
+ * ======================
+ * Social Icon Style
+ * ======================
+ */
+.social-icon {
+    margin-top: 15px;
+
+    li {
+        list-style: none;
+        float: left;
+        margin-bottom: 0px;
+
+        a {
+            font-size: 17px;
+            text-align: center;
+            margin-right: 15px;
+            width: 25px;
+            height: 25px;
+            padding: 3px;
+            border-radius: 50%;
+            font-size: 14px;
+            margin-right: 10px;
+            
+            &,
+            &:hover {
+                color: @background-1;
+                background-color: @pera-color;
+            }
+        }
+
+        &:last-child {
+            a {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+
+
+
+/**
+ * ===================================
+ * Subscription and contact  "MESSAGE"
+ * ===================================
+ */
+.message {
+
+    p {
+        margin-bottom: 0px;
+
+        &:last-child {
+            padding-bottom: 10px !important;
+        }
+    }
+}
+.subscription-success, 
+.subscription-failed, 
+.email-success, 
+.email-failed,
+.email-loading {
+    font-size: 13px;
+    display: none;
+    text-align: center !important;
+    padding: 10px 10px 0 10px;
+    .transition( 0.5s );
+}
+
+.email-loading {
+    color: #52B8FF;
+    
+    img {
+        width: 13px;
+        position: relative;
+        top: -2px;
+    }
+}
+
+.subscription-failed, 
+.email-failed{
+    color: #FF5252 !important;
+
+    .icon {
+        font-size: 12px;
+        position: relative;
+        top: 1px;
+    }
+}
+
+.subscription-success, 
+.email-success {
+    color: #56CC35;
+}
+
+.subscription-failed, 
+.email-failed,
+.subscription-success, 
+.email-success {
+    .icon {
+        font-size: 12px;
+        position: relative;
+        top: 1px;    
+    }
+}
+
+
+
+
+/**
+ * =========================
+ * Form Style 
+ * =========================
+ */
+.single-form {
+    width: 100%;
+    display: inline-table;
+
+    .form-control {
+        position: relative;
+        background-color: transparent;
+        border: 0px solid;
+        border-radius: 0;
+        box-shadow: 0 0 0 0 #fff;
+        color: @light-color;
+        margin-bottom: 20px;
+        height: 55px;
+        z-index: 100;
+        .transition( 0.4s );
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .form-control,
+    .input-label {
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 60px;
+    }
+
+    .input-label {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none; 
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        overflow: hidden;
+        left: 0;
+        top: 0;
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: @main-color-1;
+            .transition( 400ms, cubic-bezier(0.860, 0.000, 0.070, 1.000) );
+        }
+
+        &::before{
+            background-color: fade(@light-color, 30%)
+        }
+
+        &::after {
+            background-color: @main-color-1;
+            .transform( ~"translate3d(-100%, 0, 0)" );
+        }
+
+        &:hover {
+            cursor: text;
+        }
+
+        .label-text {
+            position: absolute;
+            left: 0;
+            top: 0px;
+            .transform( ~"translate3d(0, 0, 0)" );
+            .transition( 400ms, cubic-bezier(0.860, 0.000, 0.070, 1.000) );
+        }
+    }
+
+    .form-control {
+        &:focus {
+            + .input-label {
+                .label-text {
+                    font-size: 11px;
+                    color: @main-color-1;
+                    .transform( ~"translate3d(0, -26px, 0)" );
+                }
+
+                &::after {
+                    .transform( ~"translate3d(0, 0, 0)" );
+                }
+            }
+        }
+    }
+
+    .input-filled {
+        .input-label {
+            .label-text {
+                font-size: 11px;
+                color: @main-color-1;
+                .transform( ~"translate3d(0, -26px, 0)" );
+            }
+
+            &::after {
+                .transform( ~"translate3d(0, 0, 0)" );
+            }
+        }
+    }
+
+    textarea {
+        height: 100px !important;
+    }
+
+    
+}
+
+
+
+
+@media (max-width: @screen-sm-max) {
+
+}
+
+
+@media (max-width: @screen-xs-max) {
+
+    h1,
+    h2 {
+        font-size:          45px;
+        line-height:        65px;
+        font-weight:        300;
+    }
+    
+    /**
+     * ===============================
+     *  Defult CSS 
+     * ===============================
+     */
+    html *,
+    body,
+    p{
+        text-align: center;
+    }
+
+
+
+    .section-header {
+        &.text-left,
+        &.text-right {
+            &,
+            * {
+                text-align: center;
+            }
+        }
+    }
+
+
+
+    /**
+     * ================================
+     * Nav Defult Style
+     * ================================
+     */
+    .nav {
+        display: inline-block;
+    }
+
+
+
+    /**
+     * ===============================
+     *   Defult Button Style
+     * ===============================
+     */
+    .btn {
+        &,
+        &:last-child {
+            // margin: 10px !important;
+        }
+
+        
+    }
+    
+}

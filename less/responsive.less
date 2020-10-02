@@ -1,0 +1,405 @@
+// Templage Defult Veriables
+@import "variable.less";
+
+// This File Import Some Helping Function
+@import "../bootstrap/less/variables.less";
+@import "less-function.less";
+
+
+@media (max-width: 1400px) and (min-width: 991px) {
+
+
+
+	/**
+	 * ========================================
+	 * Portfolio Section Single Image Style
+	 * ========================================
+	 */
+	.image {
+		img {
+			width: 700px;
+		}
+	}
+
+
+
+	/**
+	 * ========================================
+	 * Slider Area Style
+	 * ========================================
+	 */
+	.slider {
+		padding: 0 100px;
+	}
+
+
+
+	/**
+	 * ========================================
+	 * Portfolio Project Detail Content Style
+	 * ========================================
+	 */
+	.link-list {
+	    right: 78px;
+	}
+
+}
+
+
+@media (max-width: @screen-sm-max) {
+
+	/**
+	 * =======================
+	 * Top Navigation
+	 * =======================
+	 */
+	.main-navbar-top {
+		.navbar-header {
+			float: left;
+		}
+
+		.navbar-collapse-right {
+			float: right;
+		}
+	}
+
+
+
+	/**
+	 * ========================================
+	 * Portfolio Section Single Image Style
+	 * ========================================
+	 */
+	.image {
+		img {
+			width: 100%;
+		}
+	}
+
+
+
+	/**
+	 * ========================================
+	 * Portfolio Project Detail Content Style
+	 * ========================================
+	 */
+	.project-detail {
+		.project-detail-image-outer {
+			text-align: center;
+
+			img {
+				// width: 33%;
+			}
+		}
+		
+	}
+
+	.link-list {
+	    .link {
+			.inner {
+				text-align: right;
+			}
+		}
+
+		.line {
+		    left: 0px;
+	        float: right;
+		}
+	}
+
+	.vertical-middle {
+		display: block;
+	    vertical-align: middle;
+	    float: none;
+	}
+}
+
+
+@media (max-width: @screen-xs-max) {
+
+
+	.section-heading {
+	    font-size: 35px;
+	    line-height: 45px;
+	}
+
+	.section-heading-outer {
+		&.p-l-50,
+		&.p-r-50 {
+			padding: 0px;
+		}
+	}
+
+	/**
+	 * =======================
+	 * Top Navigation
+	 * =======================
+	 */
+	.main-navbar-top {
+		.nav-trigger {
+			left: auto;
+			right: 15px;
+			.transform( ~'translate3d(0, 0px, 0)' );
+		}
+
+		.navbar-header {
+			float: left;
+		}
+
+		.navbar-collapse {
+			width: 100%;
+			left: ~'calc(50% + 15px)';
+
+			.navbar-nav {
+				padding: 0 25px 10px 25px;
+
+				li {
+					float: left;
+
+					.btn-nav {
+						line-height: 30px;
+					}
+				}
+			}
+		}
+	}
+
+
+
+	/**
+	 * ========================================
+	 * Home Section Style
+	 * ========================================
+	 */
+	.home-section {
+		
+		.heading-outer {
+			.p-t-40,
+			.p-l-40,
+			.p-r-40,
+			.p-b-40 {
+				padding: 15px;
+			}
+		}
+	}
+
+
+
+	/**
+	 * ========================================
+	 * Services Section Style
+	 * ========================================
+	 */
+	.services-section {
+		.each-services {
+			.each-services-inner {
+				max-width: 410px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 30px;
+			}
+
+			&:last-child {
+				.each-features-inner {
+					margin-bottom: 0px;
+				}
+			}
+		}
+	}
+
+
+
+
+	/**
+	 * ========================================
+	 * Services Detail View Style
+	 * ========================================
+	 */
+	.services-full-view {
+		.services-details {
+
+			.services-content-outer {
+				// margin-bottom: 30px;
+			}
+
+			.back-button-outer {
+			    position: relative;
+			    bottom: 0px;
+			    left: 0;
+			    display: inline-block;
+			    margin-top: 20px;
+			    margin-bottom: 20px;
+			}
+
+			.line-outer {
+				position: relative;
+				left: 50%;
+			}
+
+			.line {
+				margin-bottom: 6px;
+			}
+		}
+	}
+
+
+
+
+	/**
+	 * ========================================
+	 * Portfolio Project Detail Content Style
+	 * ========================================
+	 */
+	.project-detail {
+
+		.project-detail-inner {
+			display: block;
+			-webkit-flex: initial; /* Safari 6.1+ */
+		    -ms-flex: initial; /* IE 10 */ 
+		    flex: initial;
+		    text-align: left;
+		}
+
+		.project-detail-content {
+		    padding: 15px 15px 30px 15px;
+		}
+
+		.list {
+			text-align: center;
+
+			li {
+			    padding-right: 7px;
+			    margin-right: 7px;
+			    display: inline;
+			}
+		}
+	}
+
+	.heading-text {
+	    position: relative;
+	    width: 100%;
+
+	    .text {
+		    font-size: 45px;
+		    line-height: 60px;
+		    font-weight: 400;
+		}
+
+		.line {
+		    left: 50%;
+		}
+	}
+
+
+	.link-list {
+		position: relative;
+		width: 100%;
+		right: 0;
+		margin-top: 10px;
+
+	    .link {
+			.inner {
+				text-align: center;
+			}
+		}
+	}
+
+
+
+
+	/**
+	 * ========================================
+	 * Slider Area Style
+	 * ========================================
+	 */
+	.slider {
+
+		.owl-pagination {
+			float: none;
+		}
+
+		.btn-outer {
+		    float: none;
+		}
+	}
+
+
+
+
+	/**
+	 * ========================================
+	 * Testimonials Section Style
+	 * ========================================
+	 */
+	.testimonial-section {
+
+		.testimonial-wrapper {
+
+			.item {
+				padding: 0 20px;
+			}
+		}
+	}
+
+
+
+	/**
+	 * ========================================
+	 * Team Section Style
+	 * ========================================
+	 */
+	.team-member {
+		.each-item {
+			.item-inner {
+				max-width: 410px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		&:last-child {
+			.item-inner {
+				margin-bottom: 0px;
+			}
+		}
+	}
+
+
+
+	/**
+	 * ========================================
+	 * Contact Section Style
+	 * ========================================
+	 */
+	.contact-footer {
+		
+		.each-section {
+			.each-section-inner {
+				max-width: 410px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 20px;
+			}
+
+			&:last-child {
+				.each-section-inner {
+					margin-bottom: 0px;
+				}
+			}
+		}
+
+	}
+
+
+}
+
+
+@media (max-width: 480px) {
+
+}
+
+
+@media (max-width: 320px) {
+
+}
+

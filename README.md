@@ -1,6 +1,6 @@
 # my-portfolio
 
-> **Hey Reader, this is my portfolio. Do check it out and thank you for visiting - Anjali Reddy**
+> **Hey Coder, this is my portfolio. Do check it out and thank you for visiting - Anjali Reddy**
 
 ### This is created using HTML5, CSS3, JavaScript as well as LESS along with Bootstrap.
 
